@@ -23,7 +23,7 @@ class Counter extends Component {
                 <button onClick={() => {this.props.increment(this.props.count)}}>
                     +
                 </button>
-                <button onClick={() => {this.props.decrement(this.props.count)}}>
+                <button onClick={() => {/* Fill me in */ }}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
