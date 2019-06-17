@@ -4,22 +4,18 @@ import { increment, decrement } from "../actions";
 
 class Counter extends Component {
   incrementIfOdd = () => {
-    // Stretch Problem: Implement an increment function that
     // only increments if the counter value is odd
     if (this.props.count % 2 !== 0) {
-      this.props.increment(this.props.count);
+      this.props.increment();
     }
   };
 
   incrementAsync = () => {
-    // Stretch Problem: Implement an increment function that
     // increments after waiting for one second
     setTimeout(() => this.props.increment(this.props.count), 1000 )
   };
 
   render() {
-    // Fill in the two button onClick methods
-    // Upon clicking these buttons, the count
     // should decrement or increment accordingly
     const { increment, decrement, count } = this.props;
     return (
@@ -27,20 +23,19 @@ class Counter extends Component {
         Clicked: {count} times
         <button
           onClick={() => {
-            increment(count);
+            increment();
           }}
         >
           +
         </button>
         <button
           onClick={() => {
-            decrement(count);
+            decrement();
           }}
         >
           -
         </button>
-        {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
+
         <button onClick={this.incrementIfOdd}>Increment if odd</button>
         <button onClick={this.incrementAsync}>Increment async</button>
       </p>
