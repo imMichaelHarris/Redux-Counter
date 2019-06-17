@@ -8,6 +8,7 @@ class Counter extends Component {
         // only increments if the counter value is odd
         if(this.props.count % 2 !== 0 ){
             console.log('im odd')
+            this.props.increment(this.props.count)
         }
     };
 
